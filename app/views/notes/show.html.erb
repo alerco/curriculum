@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @note.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @note.description %>
+</p>
+
+<p>
+  <b>Name Archive:</b>
+  <%= @note.cv_file_name %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @note.cv_content_type %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @note.cv_file_size %>
+</p>
+
+<p>
+  <b>Update:</b>
+  <%= @note.cv_updated_at %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @note.user %>
+</p>
+
+<p><%= link_to 'Descargar', @note.cv.url %></p>
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %>

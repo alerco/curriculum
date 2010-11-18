@@ -1,0 +1,31 @@
+<h1>Notas del usuario</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Date</th>
+    <th>Name Archive</th>
+    <th>User</th>    
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @notes.each do |note| %>
+  <tr>
+    <td><%= note.name %></td>
+    <td><%= note.description %></td>
+    <th><%= note.date %></th>
+    <th><%= note.cv_file_name %></th>
+    <th><%= note.user %></th>
+    <td><%= link_to 'Show', note %></td>
+    <td><%= link_to 'Edit', edit_note_path(note) %></td>
+    <td><%= link_to 'Destroy', note, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nueva Nota', new_note_path %>
